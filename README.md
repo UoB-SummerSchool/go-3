@@ -296,7 +296,7 @@ $ go tool pprof -pdf -nodefraction=0 -unit=ms cpu.prof
 If your processed images have black lines like the ones we have shown above it is because you divided the original input image exactly into the number of parts required. For each given pixel of the image, the filter needs neighbours in radius 2 - e.g. given bounds 0-128 it will only process pixels in bounds 2-126.
 
 Fix your code so that the resulting images look the same as it used to with the single-threaded filter.
-
+<!--
 ### **OPTIONAL** Question 1i
 
 Go traces are quite powerful. You can define tasks and regions in your code and log messages.
@@ -314,7 +314,7 @@ Try to achieve something similar in `ping.go` or `medianFilter.go`.
 So far we explored concurrency with only a handful of goroutines. In this question, you will try using a very large number of goroutines and you will analyse any costs and benefits of doing so. For example, the trace below illustrates over 8000 goroutines working on sorting a slice of size 10,000,000:
 
 ![Merge sort trace](content/mergeTrace.png)
-
+-->
 ### Question 2a
 
 Open `merge.go`. It's a working merge sort program. Your task will be to parallelise the merge sort in the `parallelMergeSort()` function.
